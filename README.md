@@ -1,2 +1,2 @@
 # url-shortener-analytics
-A full-stack URL shortener with user authentication and a real analytics dashboard. Built with Node.js, TypeScript, Express, Postgres, and React. Supports short link creation, fast redirects, link management (disable/expire), and click tracking with privacy-friendly IP hashing.
+A full stack URL shortener built with TypeScript, Express, PostgreSQL, and React. Includes JWT authentication, short link creation, link management (disable/expire), and fast redirect endpoints, with Docker Compose for local development.
