@@ -1,0 +1,28 @@
+#Services contains a list of containers/databases we want docker to run together
+services:
+#Name of the service in use
+  postgres:
+#Sets the service at its latest version.
+    image: postgres:16
+#Easy to find name for docker PS
+    container_name: shorty_postgres
+#Contains Variables in this service
+    environment:
+#Creates the default user
+      POSTGRES_USERNAME: shorty
+#Sets the users Password
+      POSTGRES_PASSWORD: shorty_password
+#Maps/connects backend of the laptop to the containers ports
+    ports: 
+      - "5432:5432"
+#Saves data base data even if a container is deleted or stopped
+    volumes:
+      - shorty_pgdata:/var/lib/postgresql/data 
+
+#Declares volume so that docker creates it
+volumes:
+  shorty_pgdata:
+
+
+
+

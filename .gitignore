@@ -98,6 +98,11 @@ dist
 # Sveltekit cache directory
 .svelte-kit/
 
+# macOS junk files
+.DS_Store
+
+# Node dependencies
+node_modules/
 # vitepress build output
 **/.vitepress/dist
 
