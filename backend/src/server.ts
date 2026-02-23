@@ -1,9 +1,20 @@
+import "dotenv/config";
+//(For the first line code: loads .env file into process.env immediately when the server starts)
+//(For the first line: This must be before any prisma import so the DB URL exists first)
+
 //This imports the express library to the file
 import express from "express";
+//imports router built in /auth/register so the main server can attach it
+import { authRouter } from "./routes/auth";
+
 //Creating an instance of Express
 const app = express();
-//Adds middle ware that parses requests that are JSON
+//Adds middleware that parses requests that are JSON
 app.use(express.json());
+
+//Mounts router under /auth. So the path route becomes: (below)
+// /auth + /register = POST /auth/register
+app.use("/auth", authRouter);
 
 //Defining the route - The two objects poistions are important  
 app.get("/health", (_req, res) => {

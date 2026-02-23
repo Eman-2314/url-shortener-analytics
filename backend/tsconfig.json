@@ -38,6 +38,7 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
+    //Setting this to false to allow for imports
     "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,

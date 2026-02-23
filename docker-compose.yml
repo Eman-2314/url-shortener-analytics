@@ -9,9 +9,11 @@ services:
 #Contains Variables in this service
     environment:
 #Creates the default user
-      POSTGRES_USERNAME: shorty
+      POSTGRES_USER: shorty
 #Sets the users Password
       POSTGRES_PASSWORD: shorty_password
+#Adding DB Connection
+      POSTGRES_DB: shorty_db
 #Maps/connects backend of the laptop to the containers ports
     ports: 
       - "5432:5432"
@@ -22,7 +24,3 @@ services:
 #Declares volume so that docker creates it
 volumes:
   shorty_pgdata:
-
-
-
-

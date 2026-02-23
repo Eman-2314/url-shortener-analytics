@@ -142,3 +142,19 @@ node_modules/
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+/generated/prisma
+
+node_modules
+# Keep environment variables out of version control
+.env
+backend/.env
+/src/generated/prisma
+node_modules/
+
+# macOS
+.DS_Store
+
+# env files
+.env.*
+!.env.example
